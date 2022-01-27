@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.gameButton {
+  width: 100px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 4px;
+  margin: 12px;
+}

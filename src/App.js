@@ -18,7 +18,7 @@ function App() {
     // 8 images, 4096 by 2840, 10 by 5 cards each
     const deck = [];
     for (let i = 1; i < 9; i++) {
-      for (let j = 0; j < 4096; j += 410) {
+      for (let j = 0; j < 4096; j += 409) {
         for (let k = 0; k < 2840; k += 568) {
           deck.push(i + '.jpeg/' + j + '/' + k);
         }

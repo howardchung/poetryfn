@@ -26,6 +26,7 @@ function App() {
     }
     shuffle(deck);
     //console.log(deck);
+    setCard(deck.pop() || '');
     setDeck(deck);
   }
 
@@ -75,8 +76,9 @@ function App() {
         margin: '12px',
         width: '410px',
         height: '568px',
-        backgroundImage: `url(/${image})`,
-        backgroundPosition: `${x}px ${y}px`,
+        backgroundImage: image ? `url(./${image})` : 'none',
+        backgroundPosition: x !== undefined && y !== undefined ? `-${x}px -${y}px` : '0 0',
+        backgroundRepeat: 'no-repeat',
       }} />
       <div className="buttonContainer">
         <button className="btn btn-secondary gameButton" onClick={() => nextCard(0)}>Skip</button>
